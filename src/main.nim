@@ -24,8 +24,8 @@ type
     pause: Entity
 
 
-proc init*(scene: MainScene) =
-  init Scene(scene)
+proc initMainScene*(scene: MainScene) =
+  initScene scene
 
   # left paddle
   scene.leftPaddle = newPaddle(ppLeft, pcPlayer1)
@@ -66,7 +66,7 @@ proc free*(scene: MainScene) =
 
 proc newMainScene*(): MainScene =
   new result, free
-  init result
+  initMainScene result
 
 
 method event*(scene: MainScene, event: Event) =

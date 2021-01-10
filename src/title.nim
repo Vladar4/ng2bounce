@@ -1,7 +1,6 @@
 import
   nimgame2 / [
     entity,
-    font,
     nimgame,
     scene,
     textgraphic,
@@ -14,8 +13,8 @@ type
   TitleScene = ref object of Scene
 
 
-proc init*(scene: TitleScene) =
-  init Scene(scene)
+proc initTitleScene*(scene: TitleScene) =
+  initScene scene
 
   # Create a title text graphic with a big font
   let titleText = newTextGraphic(bigFont)
@@ -44,7 +43,7 @@ proc free*(scene: TitleScene) =
 
 proc newTitleScene*(): TitleScene =
   new result, free
-  init result
+  initTitleScene result
 
 
 method event*(scene: TitleScene, event: Event) =

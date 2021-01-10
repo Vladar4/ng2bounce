@@ -2,11 +2,9 @@ import
   nimgame2 / [
     assets,
     audio,
-    font,
     scene,
     texturegraphic,
     truetypefont,
-    types,
   ]
 
 

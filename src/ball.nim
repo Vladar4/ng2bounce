@@ -30,7 +30,7 @@ proc reset*(ball: Ball) =
   ball.pause = Pause
 
 
-proc init*(ball: Ball) =
+proc initBall*(ball: Ball) =
   ball.initEntity()
   ball.graphic = gfxData["ball"]
   ball.radius = ball.graphic.dim.w / 2
@@ -45,7 +45,7 @@ proc init*(ball: Ball) =
 
 proc newBall*(): Ball =
   new result
-  result.init()
+  result.initBall()
 
 
 method render*(ball: Ball) =

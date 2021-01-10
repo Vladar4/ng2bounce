@@ -24,7 +24,7 @@ type
     control*: PaddleControl
 
 
-proc init*(paddle: Paddle, placement: PaddlePlacement, control: PaddleControl) =
+proc initPaddle*(paddle: Paddle, placement: PaddlePlacement, control: PaddleControl) =
   paddle.initEntity()
   paddle.graphic = gfxData["paddle"]
   paddle.centrify() # Set the center point offset
@@ -44,7 +44,7 @@ proc init*(paddle: Paddle, placement: PaddlePlacement, control: PaddleControl) =
 
 proc newPaddle*(placement: PaddlePlacement, control: PaddleControl): Paddle =
   new result
-  result.init(placement, control)
+  result.initPaddle(placement, control)
 
 
 method update*(paddle: Paddle, elapsed: float) =

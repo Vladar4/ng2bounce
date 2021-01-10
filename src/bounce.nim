@@ -1,9 +1,5 @@
 import
-  nimgame2 / [
-    nimgame,
-    settings,
-    types,
-  ],
+  nimgame2/nimgame,
   data,
   title,
   main
