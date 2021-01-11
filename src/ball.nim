@@ -25,8 +25,8 @@ type
 
 proc reset*(ball: Ball) =
   ball.pos = game.size / 2  # place to the center of the screen
-  ball.vel.x = Speed * randomSign().float
-  ball.vel.y = Speed * randomSign().float
+  ball.vel.x = Speed * randSign().float
+  ball.vel.y = Speed * randSign().float
   ball.pause = Pause
 
 
