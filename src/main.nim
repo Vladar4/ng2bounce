@@ -25,7 +25,7 @@ type
 
 
 proc initMainScene*(scene: MainScene) =
-  initScene scene
+  Scene(scene).init()
 
   # left paddle
   scene.leftPaddle = newPaddle(ppLeft, pcPlayer1)

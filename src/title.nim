@@ -14,7 +14,7 @@ type
 
 
 proc initTitleScene*(scene: TitleScene) =
-  initScene scene
+  Scene(scene).init()
 
   # Create a title text graphic with a big font
   let titleText = newTextGraphic(bigFont)
